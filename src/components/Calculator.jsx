@@ -51,10 +51,14 @@ export default function Calculator() {
     }
 
     function operation(e) {
-        setOperator(e.target.value)
-        setFirstNum(num)
-        setNum(0)
-        setOpacity(0.3)
+        if (operator === '') {
+            setOperator(e.target.value)
+            setFirstNum(num)
+            setNum(0)
+            setOpacity(0.3)
+        } else {
+            calculate()
+        }
     }
 
     function calculate() {
