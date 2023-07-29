@@ -5,9 +5,9 @@ import { useState } from "react";
 export default function Calculator() {
     const [num, setNum] = useState(0);
     const [firstNum, setFirstNum] = useState();
-    const [operator, setOperator] = useState();
+    const [operator, setOperator] = useState('');
     const [opacity, setOpacity] = useState(0);
-    const [ifCalculate, setIfCalculate] = useState(false);
+    const [ifCalculate, setIfCalculate] = useState(true);
 
     function inputNum(e) {
         if (num === 0 && !ifCalculate) {
